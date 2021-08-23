@@ -33,7 +33,8 @@ fn main() -> Result<(), String> {
         None => Vec::new(),
     };
 
-    execute_command(Command::new("cargo").arg("update"))?;
+    // TODO: Add ability to skip updating.
+    // execute_command(Command::new("cargo").arg("update"))?;
 
     let cargo_toml = get_toml("Cargo.toml");
     let top_pkg_name = parse_package_name(&cargo_toml);
